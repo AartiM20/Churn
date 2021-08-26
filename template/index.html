@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Customer Churning</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="static/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+
+<body>
+	<form action="/predict" method='post'>
+		<div class="container-contact100">
+			<div class="wrap-contact100">
+				<form class="contact100-form validate-form">
+					<span class="contact100-form-title" style="color: grey">
+						Enter Customer Details
+					</span>
+
+					<h3 style="font-size: 30px; font-family: 'Cookie', cursive; color: #be9cdd">{{prediction_text}}</h3>
+
+					<br />
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Credit Score</span>
+						<input class="input100" type="text" name="CreditScore" id="CreditScore"
+							placeholder="Enter customer's credit score" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100" style="color: gray;">Select customer's Country</span>
+						<div class="form-group ">
+							<select class="myinput" id="Geography" name="Geography" required>
+								<option disabled="disabled" selected="selected">~Select~</option>
+								<option value="France">France</option>
+								<option value="Spain">Spain</option>
+								<option value="Germany">Germany</option>
+							</select>
+						</div>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100" style="color: gray;">Customer's Gender</span>
+						<div class="form-group ">
+							<select class="myinput" id="Gender" name="Gender" required>
+								<option disabled="disabled" selected="selected">~Select~</option>
+								<option value="Female">Female</option>
+								<option value="Male">Male</option>
+							</select>
+						</div>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Age</span>
+						<input class="input100" type="text" name="Age" id="Age" placeholder="Enter Customer's Age"
+							required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Tenure</span>
+						<input class="input100" type="text" name="Tenure" id="Tenure"
+							placeholder="Enter Customer's Tenure" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Balance Amount</span>
+						<input class="input100" type="text" name="Balance" id="Balance"
+							placeholder="Enter Customer's Balance" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input">
+						<span class="label-input100">Amount Purchased</span>
+						<input class="input100" type="text" name="NumOfProducts" id="NumOfProducts"
+							placeholder="Enter the Number of items purchased" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100" style="color: gray;">Do You Have Credit Card?</span>
+						<div class="form-group ">
+							<select class="myinput" id="HasCrCard" name="HasCrCard" required>
+								<option disabled="disabled" selected="selected">~Select~</option>
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+						</div>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 input100-select">
+						<span class="label-input100" style="color: gray;">Are you an Active Member</span>
+						<div class="form-group ">
+							<select class="myinput" id="IsActiveMember" name="IsActiveMember" required>
+								<option disabled="disabled" selected="selected">~Select~</option>
+								<option value="yes">Yes</option>
+								<option value="no">No</option>
+							</select>
+						</div>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Please Enter your Salary">
+						<span class="label-input100">Enter Customer's Salary(Estimared)</span>
+						<input class="input100" type="text" name="EstimatedSalary" id="EstimatedSalary"
+							placeholder="Enter the customers estimated salary" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-contact100-form-btn">
+						<input type="submit" class="butt" value="Check Your Results">
+					</div>
+					<br />
+					<div class="social-buttons">
+						<a href="https://github.com/AartiM20/"><i class="fab fa-github"></i></a>
+						<a href="https://www.linkedin.com/in/arti-mishra-4334b718b/"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.instagram.com/aarti._.mishra/"><i class="fab fa-instagram"></i></a>
+
+					</div>
+			</div>
+	</form>
+
+</body>
+
+</html>
